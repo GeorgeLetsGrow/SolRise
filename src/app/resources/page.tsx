@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
+export const metadata: Metadata = {
+  title: "Learning Resources for Families",
+  description: "Practical educator-guided ideas that help families make learning calmer, more consistent, and more encouraging at home.",
+  alternates: { canonical: "/resources" },
+};
 const tips=[["Make practice predictable","Choose a consistent, short time for learning at home. Ten focused minutes often works better than an occasional hour."],["Praise the process","Notice strategies, persistence, and thoughtful questions—not only correct answers."],["Let mistakes do their job","Ask “What did this teach us?” and give your learner time to revise before stepping in."],["Read and talk together","Conversation builds vocabulary and comprehension. Ask what surprised them, what changed, and what they predict."],["Protect rest and routines","Sleep, movement, hydration, and balanced meals all support attention and memory."],["Reach out early","A little targeted support can prevent frustration from becoming avoidance or self-doubt."]];
 export default function ResourcesPage(){return <main><SiteHeader/><section className="page-hero"><p className="eyebrow">Family resources</p><h1>Simple ideas that help young minds flourish.</h1><p>Practical guidance for making learning calmer, more consistent, and more encouraging at home.</p></section>
 <section className="tips-grid section">{tips.map(([title,text],i)=><article key={title}><span>{String(i+1).padStart(2,"0")}</span><h2>{title}</h2><p>{text}</p></article>)}</section>

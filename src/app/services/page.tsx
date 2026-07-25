@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
+
+export const metadata: Metadata = {
+  title: "Tutoring and Academic Services",
+  description: "Explore personalized math, reading, Spanish, academic coaching, homeschool portfolio evaluation, and school transition support.",
+  alternates: { canonical: "/services" },
+};
 
 const items = [
   ["Math K–12","Build number sense, close skill gaps, strengthen coursework, and grow into a confident problem-solver through clear, personalized instruction.","Foundations · Algebra · Geometry · Homework support"],

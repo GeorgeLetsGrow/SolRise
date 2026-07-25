@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
+
+export const metadata: Metadata = {
+  title: "About Our Educators",
+  description: "Meet Dianne Gonzalez and Yamilka Delgardo, the experienced educators helping SolRise students build skills, resilience, and confidence.",
+  alternates: { canonical: "/about" },
+};
 
 export default function AboutPage() {
   return <main><SiteHeader />
