@@ -1,0 +1,61 @@
+export default function ContactForm() {
+  return (
+    <form className="contact-form" name="student-inquiry" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="student-inquiry" />
+      <p className="hidden-field"><label>Do not fill this out: <input name="bot-field" /></label></p>
+
+      <fieldset>
+        <legend><span>1</span> Tell us about you</legend>
+        <div className="form-row">
+          <label>Your name<input type="text" name="parent-name" autoComplete="name" required /></label>
+          <label>Email address<input type="email" name="email" autoComplete="email" required /></label>
+        </div>
+        <div className="form-row">
+          <label>Phone <span>(optional)</span><input type="tel" name="phone" autoComplete="tel" /></label>
+          <label>Best way to reach you
+            <select name="contact-preference" defaultValue="Email">
+              <option>Email</option><option>Phone call</option><option>Text message</option>
+            </select>
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend><span>2</span> Tell us about your learner</legend>
+        <div className="form-row">
+          <label>Student&apos;s first name<input type="text" name="student-name" required /></label>
+          <label>Current grade
+            <select name="grade" defaultValue="" required>
+              <option value="" disabled>Select grade</option>
+              <option>Kindergarten</option><option>Grade 1</option><option>Grade 2</option><option>Grade 3</option>
+              <option>Grade 4</option><option>Grade 5</option><option>Grade 6</option><option>Grade 7</option>
+              <option>Grade 8</option><option>Grade 9</option><option>Grade 10</option><option>Grade 11</option>
+              <option>Grade 12</option><option>College / Adult learner</option>
+            </select>
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend><span>3</span> What support would help?</legend>
+        <label>Primary area of interest
+          <select name="service" defaultValue="" required>
+            <option value="" disabled>Choose the closest match</option>
+            <option>Math K–12</option><option>Reading K–6</option><option>Spanish K–12+</option>
+            <option>Academic success coaching</option><option>Homeschool portfolio evaluation</option>
+            <option>Academic transition support</option><option>I&apos;m not sure yet</option>
+          </select>
+        </label>
+        <div className="choice-group">
+          <span>Preferred learning format</span>
+          <div><label><input type="radio" name="format" value="In person" required /> In person</label><label><input type="radio" name="format" value="Online" /> Online</label><label><input type="radio" name="format" value="Either" /> Either works</label></div>
+        </div>
+        <label>What would you most like your learner to gain?
+          <textarea name="goals" rows={5} placeholder="Share any challenges, goals, or questions. A few sentences is perfect." required />
+        </label>
+      </fieldset>
+      <p className="form-note">We&apos;ll review your message and follow up with a thoughtful next step. No commitment required.</p>
+      <button className="button button-light" type="submit">Send my inquiry</button>
+    </form>
+  );
+}
