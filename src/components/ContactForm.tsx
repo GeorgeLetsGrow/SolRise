@@ -1,6 +1,36 @@
+"use client";
+
+import { FormEvent, useState } from "react";
+import { useRouter } from "next/navigation";
+
 export default function ContactForm() {
+  const router = useRouter();
+  const [status, setStatus] = useState<"idle" | "submitting" | "error">("idle");
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setStatus("submitting");
+
+    const formData = new FormData(event.currentTarget);
+    const body = new URLSearchParams();
+    formData.forEach((value, key) => body.append(key, String(value)));
+
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: body.toString(),
+      });
+
+      if (!response.ok) throw new Error("Submission failed");
+      router.push("/thank-you/");
+    } catch {
+      setStatus("error");
+    }
+  }
+
   return (
-    <form className="contact-form" name="student-inquiry" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="bot-field">
+    <form className="contact-form" name="student-inquiry" method="POST" onSubmit={handleSubmit} data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="student-inquiry" />
       <p className="hidden-field"><label>Do not fill this out: <input name="bot-field" /></label></p>
 
@@ -55,7 +85,10 @@ export default function ContactForm() {
         </label>
       </fieldset>
       <p className="form-note">We&apos;ll review your message and follow up with a thoughtful next step. No commitment required.</p>
-      <button className="button button-light" type="submit">Send my inquiry</button>
+      {status === "error" && <p className="form-error" role="alert">We couldn&apos;t send your inquiry. Please try again or email hello@solriselearning.org.</p>}
+      <button className="button button-light" type="submit" disabled={status === "submitting"}>
+        {status === "submitting" ? "Sending…" : "Send my inquiry"}
+      </button>
     </form>
   );
 }

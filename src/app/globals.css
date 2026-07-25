@@ -134,7 +134,9 @@ nav a:hover, footer a:hover { color:var(--green); }
 .choice-group label { display:flex; grid-template-columns:auto 1fr; align-items:center; gap:8px; padding:11px 14px; background:var(--sol-pale-yellow); border:1px solid rgba(34,34,34,.18); border-radius:999px; cursor:pointer; }
 .choice-group input { width:auto; accent-color:var(--sun); }
 .form-note { color:#59645f; font-size:12px; line-height:1.6; margin:0; }
+.form-error { margin:0; padding:12px 14px; border-radius:var(--radius-small); background:#fff0df; color:#9a3e00; font-size:13px; line-height:1.5; }
 .contact-form .button { border:0; cursor:pointer; justify-self:start; }
+.contact-form .button:disabled { cursor:wait; opacity:.7; transform:none; }
 .hidden-field { position:absolute; left:-10000px; width:1px; height:1px; overflow:hidden; }
 .button-light { background:var(--sun); color:var(--ink); }
 .thank-you { min-height:100vh; display:grid; place-items:center; padding:40px 6vw; background:var(--cream); text-align:center; }
