@@ -60,7 +60,7 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <a className="button" href="#services">Explore services</a>
-            <a className="text-link" href="/about">Meet our educators <span>→</span></a>
+            <a className="button button-secondary" href="/about">Why families choose SolRise <span>→</span></a>
           </div>
           <div className="hero-proof">
             <div><strong>K–12+</strong><span>Learning support</span></div>
