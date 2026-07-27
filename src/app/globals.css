@@ -41,6 +41,10 @@ nav a.active { color:white; background:var(--green); }
 nav a.active:hover { color:white; background:#168f89; }
 nav a:focus-visible { color:#137c77; background:var(--sol-teal-100); outline:3px solid rgba(34,179,172,.25); outline-offset:2px; }
 .mobile-contact, .menu-toggle, .mobile-menu { display:none; }
+.translate-link { display:inline-flex; align-items:center; gap:8px; min-height:42px; padding:0 15px; border:1px solid rgba(34,179,172,.32); border-radius:999px; background:white; color:#137c77; font-size:13px; font-weight:700; white-space:nowrap; transition:background .2s ease, transform .2s ease, border-color .2s ease; }
+.translate-link span { display:grid; place-items:center; width:27px; height:27px; border-radius:50%; background:var(--sol-teal-100); font-size:10px; letter-spacing:.04em; }
+.translate-link:hover { background:var(--sol-teal-100); border-color:rgba(34,179,172,.55); transform:translateY(-1px); }
+.translate-link:focus-visible { outline:3px solid rgba(34,179,172,.25); outline-offset:2px; }
 .menu-toggle { width:48px; height:48px; padding:0; border:0; border-radius:50%; background:var(--green); cursor:pointer; list-style:none; }
 .menu-toggle::-webkit-details-marker { display:none; }
 .menu-toggle span { display:block; width:21px; height:2px; margin:4px auto; border-radius:2px; background:white; transition:transform .2s ease, opacity .2s ease; }
@@ -201,9 +205,10 @@ footer { padding:45px 4.5vw; display:flex; align-items:center; justify-content:s
 footer p { font-size:12px; color:#68746f; }
 footer>div { display:flex; gap:26px; font-size:13px; font-weight:bold; }
 
-@media(max-width:1000px) {
+@media(max-width:1180px) {
   .site-header { height:126px; align-items:center; padding-top:0; }
   .site-header>.button { display:none; }
+  .site-header>.translate-link { display:none; }
   .site-header .desktop-nav { display:none; }
   .mobile-menu { display:block; position:relative; flex:0 0 auto; }
   .menu-toggle { display:grid; place-content:center; }
@@ -211,6 +216,7 @@ footer>div { display:flex; gap:26px; font-size:13px; font-weight:bold; }
   .mobile-menu nav a { padding:13px 16px; border-radius:12px; }
   .mobile-contact { display:block; margin-top:4px; background:var(--sun); color:var(--ink); text-align:center; }
   .mobile-contact:hover { background:#df7f0a; color:white; }
+  .mobile-translate { display:block; color:#137c77; background:var(--sol-teal-100); text-align:center; }
   .hero { grid-template-columns:1fr; }
   .hero-copy { padding-top:165px; min-height:730px; }
   .hero-visual { min-height:600px; }

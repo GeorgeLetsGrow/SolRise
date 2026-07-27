@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 
 export function SiteHeader() {
   const pathname = usePathname();
+  const spanishUrl = `https://translate.google.com/translate?sl=en&tl=es&u=${encodeURIComponent(`https://www.solriselearning.org${pathname}`)}`;
   const navigation = [
     { href: "/about", label: "About" },
     { href: "/services", label: "Services" },
@@ -47,8 +48,13 @@ export function SiteHeader() {
             </Link>
           ))}
           <Link className={`mobile-contact${pathname === "/contact" ? " active" : ""}`} href="/contact" aria-current={pathname === "/contact" ? "page" : undefined}>Contact</Link>
+          <a className="mobile-translate" href={spanishUrl} target="_blank" rel="noreferrer" lang="es">ES · Español</a>
         </nav>
       </details>
+      <a className="translate-link" href={spanishUrl} target="_blank" rel="noreferrer" lang="es" aria-label="Traducir esta página al español">
+        <span aria-hidden="true">ES</span>
+        Español
+      </a>
       <Link className="button button-small" href="/contact">Let&apos;s talk</Link>
     </header>
   );
