@@ -6,13 +6,19 @@ import { usePathname } from "next/navigation";
 
 export function SiteHeader() {
   const pathname = usePathname();
-  const spanishUrl = `https://translate.google.com/translate?sl=en&tl=es&u=${encodeURIComponent(`https://www.solriselearning.org${pathname}`)}`;
   const navigation = [
     { href: "/about", label: "About" },
     { href: "/services", label: "Services" },
     { href: "/how-we-learn", label: "How We Learn" },
     { href: "/resources", label: "Resources" },
   ];
+
+  function openSpanishTranslation(event: React.MouseEvent<HTMLAnchorElement>) {
+    event.preventDefault();
+    const currentPage = window.location.href.split("#")[0];
+    const translateUrl = `https://translate.google.com/translate?sl=en&tl=es&u=${encodeURIComponent(currentPage)}`;
+    window.open(translateUrl, "_blank", "noopener,noreferrer");
+  }
 
   return (
     <header className="site-header">
@@ -31,6 +37,7 @@ export function SiteHeader() {
             {item.label}
           </Link>
         ))}
+        <a className="translate-nav" href="#translate-es" onClick={openSpanishTranslation} lang="es" aria-label="Traducir esta página al español">Español</a>
       </nav>
       <details className="mobile-menu">
         <summary className="menu-toggle" aria-label="Toggle navigation menu">
@@ -48,13 +55,9 @@ export function SiteHeader() {
             </Link>
           ))}
           <Link className={`mobile-contact${pathname === "/contact" ? " active" : ""}`} href="/contact" aria-current={pathname === "/contact" ? "page" : undefined}>Contact</Link>
-          <a className="mobile-translate" href={spanishUrl} target="_blank" rel="noreferrer" lang="es">ES · Español</a>
+          <a className="mobile-translate" href="#translate-es" onClick={openSpanishTranslation} lang="es">ES · Español</a>
         </nav>
       </details>
-      <a className="translate-link" href={spanishUrl} target="_blank" rel="noreferrer" lang="es" aria-label="Traducir esta página al español">
-        <span aria-hidden="true">ES</span>
-        Español
-      </a>
       <Link className="button button-small" href="/contact">Let&apos;s talk</Link>
     </header>
   );
