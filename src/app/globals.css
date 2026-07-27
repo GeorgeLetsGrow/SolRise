@@ -103,7 +103,9 @@ footer a:hover { color:var(--green); }
 .educator-card { background:var(--cream); border-radius:var(--radius); overflow:hidden; box-shadow:0 10px 30px rgba(29,44,40,.06); }
 .portrait { height:380px; background-size:cover; background-position:center; filter:saturate(.75); }
 .portrait.dianne { background-image:url('/Dianne-Gonzalez.jpg'); background-position:center 34%; }
-.portrait.yamilka { background-image:url('/Yamilka-Delgardo.jpeg'); background-position:center 9%; }
+.portrait.yamilka { position:relative; overflow:hidden; background:none; }
+.portrait.yamilka::before { content:""; position:absolute; inset:-28px; background:url('/Yamilka-Delgardo.jpeg') center 16%/cover no-repeat; filter:blur(24px) grayscale(1) brightness(.82); transform:scale(1.12); }
+.portrait.yamilka::after { content:""; position:absolute; inset:0; background:url('/Yamilka-Delgardo.jpeg') center 6%/70% auto no-repeat; }
 .educator-card>div:last-child { padding:28px; }
 .educator-card span { color:var(--green); font-size:11px; text-transform:uppercase; letter-spacing:1.5px; font-weight:bold; }
 .educator-card h3 { font:500 31px Georgia,serif; margin:10px 0 18px; }
