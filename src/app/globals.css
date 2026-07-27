@@ -43,12 +43,15 @@ nav a:focus-visible { color:#137c77; background:var(--sol-teal-100); outline:3px
 .mobile-contact, .menu-toggle, .mobile-menu { display:none; }
 nav .translate-nav { color:#b85f00; border-left:1px solid rgba(34,34,34,.12); border-radius:0 999px 999px 0; }
 nav .translate-nav:hover { color:#8d4800; background:var(--sol-orange-100); }
-.menu-toggle { width:48px; height:48px; padding:0; border:0; border-radius:50%; background:var(--green); cursor:pointer; list-style:none; }
+.menu-toggle { position:relative; width:48px; height:48px; padding:0; border:0; border-radius:50%; background:var(--green); cursor:pointer; list-style:none; }
 .menu-toggle::-webkit-details-marker { display:none; }
-.menu-toggle span { display:block; width:21px; height:2px; margin:4px auto; border-radius:2px; background:white; transition:transform .2s ease, opacity .2s ease; }
-.mobile-menu[open] .menu-toggle span:nth-child(1) { transform:translateY(6px) rotate(45deg); }
+.menu-toggle span { position:absolute; top:50%; left:50%; display:block; width:21px; height:2px; margin:0; border-radius:2px; background:white; transform-origin:center; transition:transform .2s ease, opacity .2s ease; }
+.menu-toggle span:nth-child(1) { transform:translate(-50%,-7px); }
+.menu-toggle span:nth-child(2) { transform:translate(-50%,-1px); }
+.menu-toggle span:nth-child(3) { transform:translate(-50%,5px); }
+.mobile-menu[open] .menu-toggle span:nth-child(1) { transform:translate(-50%,-1px) rotate(45deg); }
 .mobile-menu[open] .menu-toggle span:nth-child(2) { opacity:0; }
-.mobile-menu[open] .menu-toggle span:nth-child(3) { transform:translateY(-6px) rotate(-45deg); }
+.mobile-menu[open] .menu-toggle span:nth-child(3) { transform:translate(-50%,-1px) rotate(-45deg); }
 footer a:hover { color:var(--green); }
 .button { display:inline-flex; justify-content:center; align-items:center; min-height:52px; padding:0 26px; background:var(--green); color:white; font-size:14px; font-weight:700; border-radius:999px; transition:.2s; }
 .button:hover { background:#24493b; transform:translateY(-2px); }
