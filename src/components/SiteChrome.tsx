@@ -9,8 +9,9 @@ export function SiteHeader() {
   const navigation = [
     { href: "/about", label: "About" },
     { href: "/services", label: "Services" },
-    { href: "/how-we-learn", label: "How We Learn" },
+
     { href: "/resources", label: "Resources" },
+    { href: "/policies", label: "Policies" },
   ];
 
   function openSpanishTranslation(event: React.MouseEvent<HTMLAnchorElement>) {
@@ -71,7 +72,7 @@ export function SiteFooter() {
         <span>SolRise <small>Learning Academy</small></span>
       </Link>
       <p>© 2026 SolRise Learning Academy. All rights reserved.</p>
-      <div><Link href="/services">Services</Link><Link href="/about">About</Link><Link href="/resources">Resources</Link></div>
+      <div><Link href="/services">Services</Link><Link href="/about">About</Link><Link href="/resources">Resources</Link><Link href="/policies">Policies</Link></div>
     </footer>
   );
 }

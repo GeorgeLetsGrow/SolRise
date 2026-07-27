@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.solriselearning.org";
-  const pages = ["", "/about", "/services", "/how-we-learn", "/resources", "/contact"];
+  const pages = ["", "/about", "/services", "/resources", "/policies", "/contact"];
 
   return pages.map((path) => ({
     url: `${baseUrl}${path}`,

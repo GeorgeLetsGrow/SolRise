@@ -115,6 +115,15 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="student-moments section">
+        <div className="section-heading"><div><p className="eyebrow">SolRisers in action</p><h2>Practice becomes progress.</h2></div><p>Focused instruction, useful tools, and encouraging moments help learners turn effort into confidence.</p></div>
+        <div className="moments-grid">
+          <figure className="moment moment-wide"><div style={{backgroundImage:"url('/students-math-practice.jpg')"}} role="img" aria-label="Two SolRise students practicing math together" /><figcaption>Learning side by side</figcaption></figure>
+          <figure className="moment"><div style={{backgroundImage:"url('/student-whiteboard-practice.jpg')"}} role="img" aria-label="Student solving math problems on a whiteboard" /><figcaption>Thinking made visible</figcaption></figure>
+          <figure className="moment"><div style={{backgroundImage:"url('/student-math-confidence.jpg')"}} role="img" aria-label="Smiling SolRise student with completed math practice" /><figcaption>Confidence worth celebrating</figcaption></figure>
+          <figure className="moment moment-wide"><div style={{backgroundImage:"url('/student-digital-learning.jpg')"}} role="img" aria-label="Student smiling during a digital learning activity" /><figcaption>Tools that keep learning engaging</figcaption></figure>
+        </div>
+      </section>
       <section className="educators section">
         <div className="educator-intro">
           <p className="eyebrow">Our dedicated educators</p>
@@ -164,12 +173,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="testimonial">
-        <span className="quote-mark">“</span>
-        <blockquote>Seeing my child&apos;s confidence grow in just a few weeks was the biggest win for our family this year!</blockquote>
-        <p>— A SolRise parent</p>
+      <section className="family-stories section">
+        <div className="review-summary"><strong>100%</strong><span>recommend SolRise</span><small>Based on 11 Facebook recommendations shared by families</small></div>
+        <div className="section-heading"><div><p className="eyebrow">Family feedback</p><h2>Progress families can see and feel.</h2></div><p>Families consistently share that focused support helps improve skills, reduce homework stress, and rebuild confidence.</p></div>
+        <div className="review-grid">
+          <blockquote><span>★★★★★</span><p>“She helped my daughter bring her grade back up in a very short amount of time. We couldn&apos;t be happier.”</p><cite>— SolRise parent</cite></blockquote>
+          <blockquote><span>★★★★★</span><p>“After just one hour, we noticed a significant improvement in her confidence. She is looking forward to her next tutoring session.”</p><cite>— SolRise parent</cite></blockquote>
+          <blockquote><span>★★★★★</span><p>“Her support led to noticeable improvements in his math skills and significantly reduced the stress associated with homework.”</p><cite>— SolRise parent</cite></blockquote>
+          <blockquote><span>★★★★★</span><p>“What was once a source of frustration has become a subject of confidence and pride. Our girls feel comfortable asking questions and making mistakes.”</p><cite>— SolRise parent</cite></blockquote>
+          <blockquote><span>★★★★★</span><p>“He looked forward to summer math tutoring and is heading into sixth grade with a strong foundation and a positive attitude toward math.”</p><cite>— SolRise parent</cite></blockquote>
+          <blockquote><span>★★★★★</span><p>“She explains how it all works, makes sure he understands what he is looking at, and will also be tutoring him for SAT preparation.”</p><cite>— SolRise parent</cite></blockquote>
+        </div>
       </section>
-
       <section className="resources section" id="resources">
         <div className="section-heading">
           <div><p className="eyebrow">Learning & wellness</p><h2>Ideas to help young minds flourish.</h2></div>
@@ -189,7 +204,7 @@ export default function Home() {
           <p className="eyebrow light">Start the conversation</p>
           <h2>Ready to help your student rise?</h2>
           <p>Tell us a little about your learner and what support you&apos;re looking for. We&apos;ll help you find a thoughtful next step.</p>
-          <a href="mailto:hello@solriselearning.org">hello@solriselearning.org</a>
+          <div className="contact-links"><a href="mailto:solriselearning@gmail.com">solriselearning@gmail.com</a><a href="tel:+16172819357">(617) 281-9357</a></div>
         </div>
         <ContactForm />
       </section>
