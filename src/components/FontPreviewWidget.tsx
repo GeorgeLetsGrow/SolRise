@@ -8,6 +8,11 @@ const fontOptions = [
   { label: "Coming Soon", value: '"Coming Soon", cursive' },
   { label: "Schoolbell", value: 'Schoolbell, cursive' },
   { label: "Kalam", value: 'Kalam, cursive' },
+  { label: "Mali", value: 'Mali, cursive' },
+  { label: "Handlee", value: 'Handlee, cursive' },
+  { label: "Gaegu", value: 'Gaegu, cursive' },
+  { label: "Architects Daughter", value: '"Architects Daughter", cursive' },
+  { label: "Shantell Sans", value: '"Shantell Sans", cursive' },
 ];
 
 const storageKey = "solrise-font-preview";
