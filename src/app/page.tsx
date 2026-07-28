@@ -177,12 +177,12 @@ export default function Home() {
         <div className="review-summary"><strong>100%</strong><span>recommend SolRise</span><small>Based on 11 Facebook recommendations shared by families</small></div>
         <div className="section-heading"><div><p className="eyebrow">Family feedback</p><h2>Progress families can see and feel.</h2></div><p>Families consistently share that focused support helps improve skills, reduce homework stress, and rebuild confidence.</p></div>
         <div className="review-grid">
-          <blockquote><span>★★★★★</span><p>“She helped my daughter bring her grade back up in a very short amount of time. We couldn&apos;t be happier.”</p><cite>— SolRise parent</cite></blockquote>
-          <blockquote><span>★★★★★</span><p>“After just one hour, we noticed a significant improvement in her confidence. She is looking forward to her next tutoring session.”</p><cite>— SolRise parent</cite></blockquote>
-          <blockquote><span>★★★★★</span><p>“Her support led to noticeable improvements in his math skills and significantly reduced the stress associated with homework.”</p><cite>— SolRise parent</cite></blockquote>
-          <blockquote><span>★★★★★</span><p>“What was once a source of frustration has become a subject of confidence and pride. Our girls feel comfortable asking questions and making mistakes.”</p><cite>— SolRise parent</cite></blockquote>
-          <blockquote><span>★★★★★</span><p>“He looked forward to summer math tutoring and is heading into sixth grade with a strong foundation and a positive attitude toward math.”</p><cite>— SolRise parent</cite></blockquote>
-          <blockquote><span>★★★★★</span><p>“She explains how it all works, makes sure he understands what he is looking at, and will also be tutoring him for SAT preparation.”</p><cite>— SolRise parent</cite></blockquote>
+          <blockquote><span>★★★★★</span><p>“She helped my daughter bring her grade back up in a very short amount of time. We couldn&apos;t be happier.”</p><cite>— Jennifer Ragland</cite></blockquote>
+          <blockquote><span>★★★★★</span><p>“After just one hour, we noticed a significant improvement in her confidence. She is looking forward to her next tutoring session.”</p><cite>— Jennifer Lee</cite></blockquote>
+          <blockquote><span>★★★★★</span><p>“Her support led to noticeable improvements in his math skills and significantly reduced the stress associated with homework.”</p><cite>— Angela Alvarez</cite></blockquote>
+          <blockquote><span>★★★★★</span><p>“What was once a source of frustration has become a subject of confidence and pride. Our girls feel comfortable asking questions and making mistakes.”</p><cite>— Cassandra Griffin</cite></blockquote>
+          <blockquote><span>★★★★★</span><p>“He looked forward to summer math tutoring and is heading into sixth grade with a strong foundation and a positive attitude toward math.”</p><cite>— Gabriella McColeman</cite></blockquote>
+          <blockquote><span>★★★★★</span><p>“She explains how it all works, makes sure he understands what he is looking at, and will also be tutoring him for SAT preparation.”</p><cite>— Adrianna Ball</cite></blockquote>
         </div>
       </section>
       <section className="resources section" id="resources">
