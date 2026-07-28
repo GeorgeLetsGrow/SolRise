@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Boogaloo&family=Chewy&family=Coming+Soon&family=Gaegu:wght@400;700&family=Handlee&family=Kalam:wght@400;700&family=Mali:wght@400;600&family=Patrick+Hand&family=Schoolbell&family=Shantell+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Atma:wght@300&family=Boogaloo&family=Chewy&family=Coming+Soon&family=Gaegu:wght@400;700&family=Handlee&family=Kalam:wght@400;700&family=Mali:wght@400;600&family=Patrick+Hand&family=Schoolbell&family=Shantell+Sans:wght@400;600&display=swap');
 @import "tailwindcss";
 
 
@@ -397,7 +397,7 @@ body { font-family:"Avenir Next","Trebuchet MS",Arial,sans-serif; }
 
 /* Warm handwritten display style inspired by Cuddle Type */
 :root { --font-display:Georgia,"Times New Roman",serif; }
-.hero h1, .mission h2, .section-heading h2, .educator-intro h2, .educator-card h3, .transitions h2, .contact h2, .learning-card h3, .page-hero h1, .content-split h2, .value-grid h3, .detail-grid h2, .format-grid h2, .tips-grid h2, .page-cta h2, .resource-group h2, .resource-links h3, .rate-grid h3, .policy-grid h2, .policy-note h2, .welcome-video h2, .photo-story-copy h2, .review-summary span { font-family:var(--font-display); font-weight:600; letter-spacing:-.045em; }
+.hero h1, .mission h2, .section-heading h2, .educator-intro h2, .educator-card h3, .transitions h2, .contact h2, .learning-card h3, .page-hero h1, .content-split h2, .value-grid h3, .detail-grid h2, .format-grid h2, .tips-grid h2, .page-cta h2, .resource-group h2, .resource-links h3, .rate-grid h3, .policy-grid h2, .policy-note h2, .welcome-video h2, .photo-story-copy h2, .review-summary span { font-family:var(--font-display); font-weight:var(--font-display-weight,600); letter-spacing:-.045em; }
 .brand { font-family:Georgia,"Times New Roman",serif; }
 .portrait.dianne { background-image:url('/Dianne-Gonzalez.jpg'); background-position:center center; filter:saturate(.82); }
 @media(max-width:680px) {

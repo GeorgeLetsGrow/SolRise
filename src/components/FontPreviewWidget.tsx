@@ -15,6 +15,7 @@ const fontOptions = [
   { label: "Shantell Sans", value: '"Shantell Sans", cursive' },
   { label: "Boogaloo", value: 'Boogaloo, cursive' },
   { label: "Chewy", value: 'Chewy, cursive' },
+  { label: "Atma Light", value: 'Atma, cursive', weight: "300" },
 ];
 
 const storageKey = "solrise-font-preview";
@@ -29,12 +30,15 @@ export default function FontPreviewWidget() {
     if (option) {
       setSelected(option.value);
       document.documentElement.style.setProperty("--font-display", option.value);
+      document.documentElement.style.setProperty("--font-display-weight", option.weight ?? "600");
     }
   }, []);
 
   function previewFont(value: string) {
     setSelected(value);
     document.documentElement.style.setProperty("--font-display", value);
+    const option = fontOptions.find((font) => font.value === value);
+    document.documentElement.style.setProperty("--font-display-weight", option?.weight ?? "600");
     window.localStorage.setItem(storageKey, value);
   }
 
