@@ -423,3 +423,10 @@ body { font-family:"Avenir Next","Trebuchet MS",Arial,sans-serif; }
 .font-preview-reset { padding:9px 13px; border:1px solid var(--green); border-radius:999px; background:transparent; color:var(--sol-teal-600); cursor:pointer; font-size:12px; font-weight:800; }
 .font-preview-panel>small { display:block; margin-top:12px; color:#78847f; font-size:10px; }
 @media(max-width:680px) { .font-preview { right:14px; bottom:14px; } .font-preview-toggle { width:48px; height:48px; } }
+
+/* Prevent the mobile About gallery aspect ratio from widening its grid track */
+@media(max-width:680px) {
+  .photo-story-copy, .photo-story-grid, .story-photo { min-width:0; width:100%; }
+  .story-photo { min-height:0; aspect-ratio:16/9; }
+  .story-photo.collaboration { min-height:0; aspect-ratio:4/3; }
+}
