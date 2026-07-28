@@ -49,7 +49,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     url: "https://www.solriselearning.org",
     logo: "https://www.solriselearning.org/SolRise-logo.png",
     email: "solriselearning@gmail.com",
-    telephone: "+1-617-281-9357",
+    telephone: "+1-813-842-0668",
     founder: { "@type": "Person", name: "Dianne Gonzalez" },
     description: "Personalized K–12 tutoring, academic coaching, homeschool support, and enrichment offered in person and online.",
     areaServed: "United States",

@@ -86,7 +86,7 @@ export default function ContactForm() {
         </label>
       </fieldset>
       <p className="form-note">We&apos;ll review your message and follow up with a thoughtful next step. No commitment required.</p>
-      {status === "error" && <p className="form-error" role="alert">We couldn&apos;t send your inquiry. Please try again, email solriselearning@gmail.com, or call (617) 281-9357.</p>}
+      {status === "error" && <p className="form-error" role="alert">We couldn&apos;t send your inquiry. Please try again, email solriselearning@gmail.com, or call (813) 842-0668.</p>}
       <button className="button button-light" type="submit" disabled={status === "submitting"}>
         {status === "submitting" ? "Sending…" : "Send my inquiry"}
       </button>
