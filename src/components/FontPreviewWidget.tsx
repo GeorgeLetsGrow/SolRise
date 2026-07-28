@@ -13,6 +13,7 @@ const fontOptions = [
   { label: "Gaegu", value: 'Gaegu, cursive' },
   { label: "Architects Daughter", value: '"Architects Daughter", cursive' },
   { label: "Shantell Sans", value: '"Shantell Sans", cursive' },
+  { label: "Boogaloo", value: 'Boogaloo, cursive' },
 ];
 
 const storageKey = "solrise-font-preview";
