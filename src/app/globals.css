@@ -321,6 +321,9 @@ body { font-family:"Avenir Next","Trebuchet MS",Arial,sans-serif; }
 .portrait.dianne { background-image:url('/dianne-solrise-polo.jpg'); background-position:center 36%; filter:saturate(.92); }
 .portrait.yamilka::before { background-image:url('/yamilka-solrise-polo.jpg'); filter:blur(22px) saturate(.85) brightness(.9); }
 .portrait.yamilka::after { background-image:url('/yamilka-solrise-polo.jpg'); background-position:center 28%; background-size:cover; }
+@media(min-width:681px) {
+  .portrait.yamilka::after { background-position:center; background-size:contain; }
+}
 .in-person .learning-image { background-image:url('/dianne-group-session.jpg'); background-position:center; }
 .online .learning-image { background-image:url('/online-math-session.jpg'); background-position:center; }
 .photo-story { display:grid; grid-template-columns:.65fr 1.35fr; gap:6vw; align-items:center; background:white; }
