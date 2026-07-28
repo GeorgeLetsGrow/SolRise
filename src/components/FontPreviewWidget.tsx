@@ -14,6 +14,7 @@ const fontOptions = [
   { label: "Architects Daughter", value: '"Architects Daughter", cursive' },
   { label: "Shantell Sans", value: '"Shantell Sans", cursive' },
   { label: "Boogaloo", value: 'Boogaloo, cursive' },
+  { label: "Chewy", value: 'Chewy, cursive' },
 ];
 
 const storageKey = "solrise-font-preview";
