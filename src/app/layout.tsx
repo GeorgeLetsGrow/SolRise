@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import FontPreviewWidget from "@/components/FontPreviewWidget";
+
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.solriselearning.org"),
@@ -57,5 +57,5 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     knowsAbout: ["Mathematics", "Reading", "Spanish", "Academic coaching", "Homeschool education"],
   };
 
-  return <html lang="en"><body>{children}<FontPreviewWidget /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} /></body></html>;
+  return <html lang="en"><body>{children}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} /></body></html>;
 }

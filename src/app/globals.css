@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Atma:wght@300&family=Boogaloo&family=Chewy&family=Coming+Soon&family=Gaegu:wght@400;700&family=Handlee&family=Kalam:wght@400;700&family=Mali:wght@400;600&family=Patrick+Hand&family=Schoolbell&family=Shantell+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 @import "tailwindcss";
 
 
@@ -396,7 +396,7 @@ body { font-family:"Avenir Next","Trebuchet MS",Arial,sans-serif; }
 }
 
 /* Warm handwritten display style inspired by Cuddle Type */
-:root { --font-display:Georgia,"Times New Roman",serif; }
+:root { --font-display:Handlee,cursive; --font-display-weight:400; }
 .hero h1, .mission h2, .section-heading h2, .educator-intro h2, .educator-card h3, .transitions h2, .contact h2, .learning-card h3, .page-hero h1, .content-split h2, .value-grid h3, .detail-grid h2, .format-grid h2, .tips-grid h2, .page-cta h2, .resource-group h2, .resource-links h3, .rate-grid h3, .policy-grid h2, .policy-note h2, .welcome-video h2, .photo-story-copy h2, .review-summary span { font-family:var(--font-display); font-weight:var(--font-display-weight,600); letter-spacing:-.045em; }
 .brand { font-family:Georgia,"Times New Roman",serif; }
 .portrait.dianne { background-image:url('/Dianne-Gonzalez.jpg'); background-position:center center; filter:saturate(.82); }
@@ -408,21 +408,7 @@ body { font-family:"Avenir Next","Trebuchet MS",Arial,sans-serif; }
 }
 
 
-.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
-.font-preview { position:fixed; right:20px; bottom:20px; z-index:100; font-family:"Avenir Next","Trebuchet MS",Arial,sans-serif; }
-.font-preview-toggle { width:52px; height:52px; border:2px solid white; border-radius:50%; background:var(--green); color:white; box-shadow:0 8px 28px rgba(20,70,66,.28); cursor:pointer; font:700 18px Georgia,serif; }
-.font-preview-toggle:hover { background:var(--sol-teal-600); transform:translateY(-2px); }
-.font-preview.is-open .font-preview-toggle { display:none; }
-.font-preview-panel { width:min(310px,calc(100vw - 32px)); padding:20px; border:1px solid rgba(34,34,34,.14); border-radius:18px; background:white; color:var(--ink); box-shadow:0 18px 55px rgba(27,52,48,.22); }
-.font-preview-panel>div { display:flex; align-items:center; justify-content:space-between; gap:18px; margin-bottom:18px; }
-.font-preview-panel>div strong { font-size:15px; }
-.font-preview-panel>div button { width:32px; height:32px; border:0; border-radius:50%; background:var(--cream); color:var(--ink); cursor:pointer; font-size:21px; line-height:1; }
-.font-preview-panel label { display:block; margin-bottom:7px; color:#56645f; font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:1px; }
-.font-preview-panel select { width:100%; padding:11px 12px; border:1px solid #b8c5bf; border-radius:10px; background:white; color:var(--ink); font:14px inherit; }
-.font-preview-panel>p { margin:18px 0; padding:16px; border-radius:12px; background:var(--cream); color:var(--green); font-size:26px; line-height:1.15; }
-.font-preview-reset { padding:9px 13px; border:1px solid var(--green); border-radius:999px; background:transparent; color:var(--sol-teal-600); cursor:pointer; font-size:12px; font-weight:800; }
-.font-preview-panel>small { display:block; margin-top:12px; color:#78847f; font-size:10px; }
-@media(max-width:680px) { .font-preview { right:14px; bottom:14px; } .font-preview-toggle { width:48px; height:48px; } }
+
 
 /* Prevent the mobile About gallery aspect ratio from widening its grid track */
 @media(max-width:680px) {
@@ -439,7 +425,7 @@ body { font-family:"Avenir Next","Trebuchet MS",Arial,sans-serif; }
 
 /* Featured family resource video and Vital Health link */
 .resource-video { display:grid; grid-template-columns:.75fr 1.25fr; gap:7vw; align-items:center; }
-.resource-video h2 { margin:0 0 22px; font:600 clamp(38px,5vw,62px)/1.05 var(--font-display); letter-spacing:-.045em; }
+.resource-video h2 { margin:0 0 22px; font:var(--font-display-weight,400) clamp(38px,5vw,62px)/1.05 var(--font-display); letter-spacing:-.045em; }
 .resource-video>div:first-child>p:not(.eyebrow) { color:#5d6a65; font-size:17px; line-height:1.75; }
 .video-embed { position:relative; aspect-ratio:16/9; overflow:hidden; border-radius:var(--radius); background:#153d3a; box-shadow:0 18px 45px rgba(29,44,40,.14); }
 .video-embed iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
