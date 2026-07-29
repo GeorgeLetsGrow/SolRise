@@ -195,6 +195,18 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="step-up-partner section" aria-labelledby="step-up-heading">
+        <div className="step-up-logo-wrap">
+          <img src="/step-up-for-students.png" alt="Step Up for Students" />
+        </div>
+        <div>
+          <p className="eyebrow">Scholarships accepted</p>
+          <h2 id="step-up-heading">Proud to support Step Up for Students families.</h2>
+          <p>SolRise Learning Academy welcomes eligible families using Step Up for Students scholarships for personalized academic support.</p>
+          <a className="button" href="https://www.stepupforstudents.org/" target="_blank" rel="noopener noreferrer">Learn about Step Up</a>
+        </div>
+      </section>
+
       <section className="contact" id="contact">
         <div className="contact-intro">
           <p className="eyebrow light">Start the conversation</p>

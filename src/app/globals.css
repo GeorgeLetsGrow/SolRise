@@ -503,3 +503,14 @@ body.gallery-open { overflow:hidden; }
   .gallery-previous { left:calc(50% - 124px); }
   .gallery-next { right:calc(50% - 124px); }
 }
+
+/* Step Up for Students partner callout */
+.step-up-partner { display:grid; grid-template-columns:minmax(240px,.75fr) 1.25fr; align-items:center; gap:7vw; background:var(--sol-orange-100); }
+.step-up-logo-wrap { display:grid; place-items:center; min-height:320px; padding:34px; border-radius:var(--radius); background:white; box-shadow:0 16px 42px rgba(64,39,7,.08); }
+.step-up-logo-wrap img { display:block; width:min(100%,430px); height:auto; }
+.step-up-partner h2 { margin:0 0 22px; max-width:760px; font:var(--font-display-weight,400) clamp(38px,5vw,62px)/1.05 var(--font-display); letter-spacing:-.045em; }
+.step-up-partner>div:last-child>p:not(.eyebrow) { max-width:680px; margin:0 0 28px; color:#5d6a65; font-size:17px; line-height:1.75; }
+@media(max-width:680px) {
+  .step-up-partner { grid-template-columns:1fr; }
+  .step-up-logo-wrap { min-height:0; padding:26px; }
+}

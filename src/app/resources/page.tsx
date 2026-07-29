@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 
 const groups = [
   { title:"Math", intro:"Build skills, review concepts, and practice at your learner’s pace.", links:[
+    ["Math Mammoth Multiplication Tables","Practice one multiplication table, selected combinations, or all tables with immediate feedback.","https://www.mathmammoth.com/practice/multiplication"],
     ["Khan Academy Math","Free lessons and practice from early math through calculus.","https://www.khanacademy.org/math"],
     ["IXL Math","Grade-level math practice with personalized skill recommendations.","https://www.ixl.com/math"],
   ]},
