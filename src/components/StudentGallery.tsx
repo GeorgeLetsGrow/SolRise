@@ -54,9 +54,19 @@ export default function StudentGallery() {
       </div>
 
       {selected && (
-        <div className="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Student photo gallery" onClick={close}>
+        <div
+          className="gallery-lightbox"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Student photo gallery"
+          onClick={(event) => {
+            if (event.target === event.currentTarget) close();
+          }}
+        >
           <button className="gallery-close" type="button" onClick={close} aria-label="Close gallery">×</button>
-          <button className="gallery-arrow gallery-previous" type="button" onClick={(event) => { event.stopPropagation(); previous(); }} aria-label="Previous photo">‹</button>
+          <button className="gallery-arrow gallery-previous" type="button" onClick={previous} aria-label="Previous photo">
+            <span aria-hidden="true">‹</span><small>Previous</small>
+          </button>
           <figure className="gallery-dialog" onClick={(event) => event.stopPropagation()}>
             <img src={selected.src} alt={selected.alt} />
             <figcaption>
@@ -64,7 +74,9 @@ export default function StudentGallery() {
               <strong>{selected.caption}</strong>
             </figcaption>
           </figure>
-          <button className="gallery-arrow gallery-next" type="button" onClick={(event) => { event.stopPropagation(); next(); }} aria-label="Next photo">›</button>
+          <button className="gallery-arrow gallery-next" type="button" onClick={next} aria-label="Next photo">
+            <small>Next</small><span aria-hidden="true">›</span>
+          </button>
         </div>
       )}
     </>
