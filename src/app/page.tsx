@@ -1,5 +1,6 @@
 import ContactForm from "@/components/ContactForm";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
+import StudentGallery from "@/components/StudentGallery";
 
 const services = [
   {
@@ -117,12 +118,7 @@ export default function Home() {
 
       <section className="student-moments section">
         <div className="section-heading"><div><p className="eyebrow">SolRisers in action</p><h2>Practice becomes progress.</h2></div><p>Focused instruction, useful tools, and encouraging moments help learners turn effort into confidence.</p></div>
-        <div className="moments-grid">
-          <figure className="moment moment-wide"><div style={{backgroundImage:"url('/students-math-practice.jpg')"}} role="img" aria-label="Two SolRise students practicing math together" /><figcaption>Learning side by side</figcaption></figure>
-          <figure className="moment"><div style={{backgroundImage:"url('/student-whiteboard-practice.jpg')"}} role="img" aria-label="Student solving math problems on a whiteboard" /><figcaption>Thinking made visible</figcaption></figure>
-          <figure className="moment"><div style={{backgroundImage:"url('/student-math-confidence.jpg')"}} role="img" aria-label="Smiling SolRise student with completed math practice" /><figcaption>Confidence worth celebrating</figcaption></figure>
-          <figure className="moment moment-wide"><div style={{backgroundImage:"url('/student-digital-learning.jpg')"}} role="img" aria-label="Student smiling during a digital learning activity" /><figcaption>Tools that keep learning engaging</figcaption></figure>
-        </div>
+        <StudentGallery />
       </section>
       <section className="educators section">
         <div className="educator-intro">
