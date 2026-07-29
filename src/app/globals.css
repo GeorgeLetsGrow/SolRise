@@ -514,3 +514,8 @@ body.gallery-open { overflow:hidden; }
   .step-up-partner { grid-template-columns:1fr; }
   .step-up-logo-wrap { min-height:0; padding:26px; }
 }
+
+/* Center Dianne's full portrait on the About page */
+.about-dianne-portrait { position:relative; overflow:hidden; background:none!important; filter:none!important; }
+.about-dianne-portrait::before { content:""; position:absolute; inset:-24px; background:url('/Dianne-Gonzalez.jpg') center/cover no-repeat; filter:blur(22px) saturate(.72) brightness(.88); transform:scale(1.12); }
+.about-dianne-portrait::after { content:""; position:absolute; inset:0; background:url('/Dianne-Gonzalez.jpg') center/contain no-repeat; }

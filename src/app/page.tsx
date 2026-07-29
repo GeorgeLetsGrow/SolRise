@@ -25,26 +25,6 @@ const services = [
   },
 ];
 
-const posts = [
-  {
-    tag: "Reading",
-    title: "Boost Your Child's Reading Skills with Effective Tutoring",
-    text: "Discover how personalized instruction can strengthen skills, reduce frustration, and renew a child's confidence.",
-    href: "https://www.solriselearning.org/post/boost-your-child-s-reading-skills-with-effective-tutoring",
-  },
-  {
-    tag: "Mathematics",
-    title: "Top Tips for K–12 Math Success at Home",
-    text: "Practical ways families can create a positive learning environment and help math skills grow at home.",
-    href: "https://www.solriselearning.org/post/top-tips-for-k-12-math-success-at-home",
-  },
-  {
-    tag: "Wellness",
-    title: "Nourishing Young Minds: Healthy Eating for Academic Growth",
-    text: "Explore the connection between nutrition, concentration, cognitive function, and academic performance.",
-    href: "https://www.solriselearning.org/post/nourishing-young-minds-healthy-eating-for-academic-growth",
-  },
-];
 
 export default function Home() {
   return (
@@ -179,19 +159,6 @@ export default function Home() {
           <blockquote><span>★★★★★</span><p>“What was once a source of frustration has become a subject of confidence and pride. Our girls feel comfortable asking questions and making mistakes.”</p><cite>— Cassandra Griffin</cite></blockquote>
           <blockquote><span>★★★★★</span><p>“He looked forward to summer math tutoring and is heading into sixth grade with a strong foundation and a positive attitude toward math.”</p><cite>— Gabriella McColeman</cite></blockquote>
           <blockquote><span>★★★★★</span><p>“She explains how it all works, makes sure he understands what he is looking at, and will also be tutoring him for SAT preparation.”</p><cite>— Adrianna Ball</cite></blockquote>
-        </div>
-      </section>
-      <section className="resources section" id="resources">
-        <div className="section-heading">
-          <div><p className="eyebrow">Learning & wellness</p><h2>Ideas to help young minds flourish.</h2></div>
-          <p>Educational guidance and wellness tips for families supporting an academic journey.</p>
-        </div>
-        <div className="post-grid">
-          {posts.map((post) => (
-            <a className="post-card" href={post.href} key={post.title} target="_blank" rel="noreferrer">
-              <span>{post.tag}</span><h3>{post.title}</h3><p>{post.text}</p><strong>Read article →</strong>
-            </a>
-          ))}
         </div>
       </section>
 
