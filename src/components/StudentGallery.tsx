@@ -54,10 +54,10 @@ export default function StudentGallery() {
       </div>
 
       {selected && (
-        <div className="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Student photo gallery" onMouseDown={close}>
+        <div className="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Student photo gallery" onClick={close}>
           <button className="gallery-close" type="button" onClick={close} aria-label="Close gallery">×</button>
           <button className="gallery-arrow gallery-previous" type="button" onClick={(event) => { event.stopPropagation(); previous(); }} aria-label="Previous photo">‹</button>
-          <figure className="gallery-dialog" onMouseDown={(event) => event.stopPropagation()}>
+          <figure className="gallery-dialog" onClick={(event) => event.stopPropagation()}>
             <img src={selected.src} alt={selected.alt} />
             <figcaption>
               <span>{selectedIndex! + 1} / {photos.length}</span>
