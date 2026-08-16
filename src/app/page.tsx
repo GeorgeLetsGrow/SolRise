@@ -52,17 +52,14 @@ export default function Home() {
         <div className="hero-visual">
           <div className="sun-shape" />
           <div className="hero-media">
-            <video
+            <iframe
               className="hero-video"
-              autoPlay
-              muted
-              loop
-              playsInline
-              poster="/solrise-hero-poster.avif"
-              aria-label="SolRise Learning Academy students learning together"
-            >
-              <source src="/solrise-hero.mp4" type="video/mp4" />
-            </video>
+              src="https://customer-1zqxtgbux21iq18l.cloudflarestream.com/1ae2ba825624108f8172e7ee51985325/iframe?poster=https%3A%2F%2Fcustomer-1zqxtgbux21iq18l.cloudflarestream.com%2F1ae2ba825624108f8172e7ee51985325%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+              title="Welcome to SolRise Learning Academy"
+              loading="lazy"
+              allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+              allowFullScreen
+            />
           </div>
           <div className="floating-note">Learning designed around <strong>your child.</strong></div>
         </div>
