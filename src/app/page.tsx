@@ -51,6 +51,7 @@ export default function Home() {
         </div>
         <div className="hero-visual">
           <div className="sun-shape" />
+          <p className="hero-video-heading">Learning designed around <em>your child.</em></p>
           <div className="hero-media">
             <iframe
               className="hero-video"
@@ -61,7 +62,6 @@ export default function Home() {
               allowFullScreen
             />
           </div>
-          <div className="floating-note">Learning designed around <strong>your child.</strong></div>
         </div>
       </section>
 
