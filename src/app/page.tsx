@@ -113,7 +113,7 @@ export default function Home() {
           <div>
             <span>FOUNDER</span>
             <h3>Dianne Gonzalez</h3>
-            <p>Dianne Gonzalez is the founder of SolRise Learning Academy and a highly respected certified math educator who believes that every student has the ability to learn, grow, and thrive. With a passion for education and a heart for student success, Dianne is dedicated to creating meaningful learning experiences that build confidence, strengthen skills, and inspire a love of learning. Her student-centered approach combines high expectations with personalized support, empowering learners to overcome challenges, reach their goals, and realize their full potential. Through SolRise, Dianne is committed to helping students rise academically while fostering resilience, self-belief, and lifelong success.</p>
+            <p>Dianne Gonzalez is the founder of SolRise Learning Academy and a highly respected certified math educator who believes that every student has the ability to learn, grow, and thrive. With a passion for education and a heart for student success, Dianne is dedicated to creating meaningful learning experiences that build confidence, strengthen skills, and inspire a love of learning. Her student-centered approach combines high expectations with personalized support, empowering learners to overcome challenges, reach their goals, and realize their full potential.</p>
           </div>
         </article>
         <article className="educator-card reverse">
