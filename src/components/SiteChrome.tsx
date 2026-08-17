@@ -136,8 +136,14 @@ export function SiteFooter() {
       <p>© 2026 SolRise Learning Academy. All rights reserved.</p>
       <div className="footer-links"><Link href="/services">Services</Link><Link href="/about">About</Link><Link href="/resources">Resources</Link><Link href="/policies">Policies</Link></div>
       <div className="footer-social" aria-label="Social media">
-        <a href="https://www.instagram.com/solriselearning" target="_blank" rel="noopener noreferrer" aria-label="SolRise Learning Academy on Instagram">Instagram</a>
-        <a href="https://www.facebook.com/share/1ExCpqJDMs/" target="_blank" rel="noopener noreferrer" aria-label="SolRise Learning Academy on Facebook">Facebook</a>
+        <a href="https://www.instagram.com/solriselearning" target="_blank" rel="noopener noreferrer" aria-label="SolRise Learning Academy on Instagram">
+          <svg className="social-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle className="social-icon-dot" cx="17.4" cy="6.7" r="1" /></svg>
+          <span>Instagram</span>
+        </a>
+        <a href="https://www.facebook.com/share/1ExCpqJDMs/" target="_blank" rel="noopener noreferrer" aria-label="SolRise Learning Academy on Facebook">
+          <svg className="social-icon social-icon-facebook" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.2 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.8-.1-1.7-.2-2.5-.2-2.5 0-4.2 1.5-4.2 4.3v2.2H8v3.1h2.8v8h3.4Z" /></svg>
+          <span>Facebook</span>
+        </a>
       </div>
     </footer>
   );

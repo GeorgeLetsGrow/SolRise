@@ -217,6 +217,10 @@ footer { padding:45px max(4.5vw,calc((100vw - var(--content-max)) / 2)); display
 footer p { font-size:12px; color:#68746f; }
 footer>div { display:flex; gap:26px; font-size:13px; font-weight:bold; }
 .footer-social a { color:var(--green); }
+.footer-social a { display:inline-flex; align-items:center; gap:7px; }
+.social-icon { width:20px; height:20px; flex:none; fill:none; stroke:currentColor; stroke-width:1.8; }
+.social-icon-dot { fill:currentColor; stroke:none; }
+.social-icon-facebook { fill:currentColor; stroke:none; }
 
 @media(max-width:1180px) {
   .site-header { height:126px; align-items:center; padding-top:0; }
