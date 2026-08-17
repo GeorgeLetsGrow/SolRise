@@ -50,7 +50,8 @@ export default function StudentGallery() {
       <div className="gallery-stage" aria-live="polite">
         {photos.map((photo, index) => (
           <figure className={`gallery-slide${index === activeIndex ? " is-active" : ""}`} key={photo.src} aria-hidden={index !== activeIndex}>
-            <img src={photo.src} alt={index === activeIndex ? photo.alt : ""} loading={index === 0 ? "eager" : "lazy"} />
+            <img className="gallery-slide-backdrop" src={photo.src} alt="" aria-hidden="true" loading="lazy" />
+            <img className="gallery-slide-image" src={photo.src} alt={index === activeIndex ? photo.alt : ""} loading={index === 0 ? "eager" : "lazy"} />
             <figcaption><span>{String(index + 1).padStart(2, "0")} / {String(photos.length).padStart(2, "0")}</span><strong>{photo.caption}</strong></figcaption>
           </figure>
         ))}
