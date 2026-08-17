@@ -72,7 +72,11 @@ export function SiteFooter() {
         <span>SolRise <small>Learning Academy</small></span>
       </Link>
       <p>© 2026 SolRise Learning Academy. All rights reserved.</p>
-      <div><Link href="/services">Services</Link><Link href="/about">About</Link><Link href="/resources">Resources</Link><Link href="/policies">Policies</Link></div>
+      <div className="footer-links"><Link href="/services">Services</Link><Link href="/about">About</Link><Link href="/resources">Resources</Link><Link href="/policies">Policies</Link></div>
+      <div className="footer-social" aria-label="Social media">
+        <a href="https://www.instagram.com/solriselearning" target="_blank" rel="noopener noreferrer" aria-label="SolRise Learning Academy on Instagram">Instagram</a>
+        <a href="https://www.facebook.com/share/1ExCpqJDMs/" target="_blank" rel="noopener noreferrer" aria-label="SolRise Learning Academy on Facebook">Facebook</a>
+      </div>
     </footer>
   );
 }

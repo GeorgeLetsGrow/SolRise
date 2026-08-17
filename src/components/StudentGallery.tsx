@@ -3,6 +3,9 @@
 import { useCallback, useEffect, useState } from "react";
 
 const photos = [
+  { src: "/solrise-team-peace.jpeg", alt: "Dianne and Yamilka smiling and making peace signs", caption: "The SolRise team brings warmth to learning" },
+  { src: "/solrise-team-laughing.jpeg", alt: "Dianne and Yamilka sharing a laugh", caption: "Joy is part of the learning process" },
+  { src: "/solrise-team-joy.jpeg", alt: "Dianne and Yamilka laughing together", caption: "Educators who lead with heart" },
   { src: "/solrise-gallery-group.jpg", alt: "SolRise educator smiling with a group of young learners", caption: "Learning and growing together" },
   { src: "/solrise-gallery-library-practice.jpg", alt: "Two students practicing math with whiteboards at the library", caption: "Focused practice in the community" },
   { src: "/solrise-gallery-library-group.jpg", alt: "Three students smiling during a library learning session", caption: "Confidence worth celebrating" },

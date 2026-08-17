@@ -71,10 +71,10 @@ export default function ContactForm() {
         <label>Primary area of interest
           <select name="service" defaultValue="" required>
             <option value="" disabled>Choose the closest match</option>
-            <option>Math K–12</option><option>Reading K–6</option><option>Spanish K–12+</option>
+            <option>Math K–12+</option><option>Reading K–6</option><option>Spanish K–12+</option>
             <option>Test Prep</option>
-            <option>Academic success coaching</option><option>Homeschool portfolio evaluation</option>
-            <option>Academic transition support</option><option>I&apos;m not sure yet</option>
+            <option>Academic coaching &amp; transition support</option><option>Homeschool portfolio evaluation</option>
+            <option>I&apos;m not sure yet</option>
           </select>
         </label>
         <div className="choice-group">

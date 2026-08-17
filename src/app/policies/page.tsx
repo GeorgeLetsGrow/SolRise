@@ -14,7 +14,7 @@ const policies = [
   { title:"Travel Policy", text:"In-home support is available within designated service areas. A travel fee may apply based on distance, and any travel fee will be clearly discussed and agreed upon before services begin." },
 ];
 
-const rates = [["Private session","60 minutes","$70"],["Private session","30 minutes","$40"],["Group session","Per student","$45"]];
+const rates = [["Private session","60 minutes","$70"],["Private session","30 minutes","$40"],["Group session","60 minutes · per student","$45"]];
 
 export default function PoliciesPage(){return <main><SiteHeader/><section className="page-hero"><p className="eyebrow">Policies & rates</p><h1>Clear expectations create a better experience.</h1><p>We believe families deserve straightforward information before services begin. Please review our current rates and policies below.</p></section>
 <section className="rates section"><div className="section-heading"><div><p className="eyebrow">Current rates</p><h2>Choose the support that fits.</h2></div><p>Rates are discussed and confirmed before scheduling. Group sessions are priced per student.</p></div><div className="rate-grid">{rates.map(([name,duration,price])=><article key={duration}><span>{duration}</span><h3>{name}</h3><strong>{price}</strong></article>)}</div></section>

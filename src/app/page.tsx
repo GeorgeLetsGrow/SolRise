@@ -5,7 +5,7 @@ import StudentGallery from "@/components/StudentGallery";
 const services = [
   {
     number: "01",
-    title: "Math K–12",
+    title: "Math K–12+",
     text: "Personalized math support that meets students where they are, strengthens foundational skills, and builds confident problem-solvers.",
   },
   {
@@ -20,8 +20,13 @@ const services = [
   },
   {
     number: "04",
-    title: "Academic Success",
+    title: "Academic Coaching & Transition Support",
     text: "Coaching for organization, study habits, goal-setting, and school transitions so students can move forward with clarity.",
+  },
+  {
+    number: "05",
+    title: "Homeschool Portfolio Evaluation",
+    text: "A thoughtful review of academic work and documentation, with clear feedback and practical next steps.",
   },
 ];
 
@@ -119,17 +124,6 @@ export default function Home() {
             <p>Yamilka Delgardo, M.Ed. is a certified educator with over 20 years of experience and a passion for helping students reach their full potential. Known for her energetic and engaging teaching style, she excels at finding the perfect balance between meaningful learning and fun. Yamilka believes that every student can succeed and is committed to creating a supportive environment where learners build confidence, develop strong academic skills, and discover a genuine love for learning. With high expectations and a student-centered approach, she challenges students to grow while providing the encouragement and guidance they need to thrive.</p>
           </div>
         </article>
-      </section>
-
-      <section className="transitions">
-        <div>
-          <p className="eyebrow light">Academic excellence</p>
-          <h2>Clear guidance for seamless transitions.</h2>
-        </div>
-        <div className="transition-list">
-          <article><span>01</span><div><h3>Homeschool Portfolio Evaluation</h3><p>Comprehensive assessment of your child&apos;s academic journey to help ensure their portfolio is complete, rigorous, and ready for the next step.</p></div></article>
-          <article><span>02</span><div><h3>Academic Transition Management</h3><p>Expert guidance through the move from homeschooling to a traditional school setting, including logistics, planning, and curriculum alignment.</p></div></article>
-        </div>
       </section>
 
       <section className="learning section" id="learning">

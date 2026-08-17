@@ -93,7 +93,7 @@ footer a:hover { color:var(--green); }
 .section-heading { display:flex; justify-content:space-between; align-items:end; gap:60px; margin-bottom:60px; }
 .section-heading h2, .educator-intro h2 { font:500 clamp(38px,4vw,58px)/1.08 Georgia,serif; margin:0; max-width:680px; letter-spacing:-1.5px; }
 .section-heading>p { max-width:470px; color:#64716d; line-height:1.7; margin:0; }
-.service-grid { display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid #bac2bb; border-left:1px solid #bac2bb; border-radius:var(--radius); overflow:hidden; }
+.service-grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); border-top:1px solid #bac2bb; border-left:1px solid #bac2bb; border-radius:var(--radius); overflow:hidden; }
 .service-card { padding:35px 28px; min-height:360px; border-right:1px solid #bac2bb; border-bottom:1px solid #bac2bb; display:flex; flex-direction:column; background:rgba(255,255,255,.22); transition:.25s; }
 .service-card:hover { background:white; transform:translateY(-5px); box-shadow:0 20px 40px rgba(30,46,40,.08); }
 .service-number { font:italic 18px Georgia,serif; color:#77837e; }
@@ -106,7 +106,7 @@ footer a:hover { color:var(--green); }
 .educator-intro>p:last-child { color:#65716d; line-height:1.7; }
 .educator-card { background:var(--cream); border-radius:var(--radius); overflow:hidden; box-shadow:0 10px 30px rgba(29,44,40,.06); }
 .portrait { height:380px; background-size:cover; background-position:center; filter:saturate(.75); }
-.portrait.dianne { background-image:url('/Dianne-Gonzalez.jpg'); background-position:center 34%; }
+.portrait.dianne { background-image:url('/dianne-gonzalez-library.jpeg'); background-position:center 34%; }
 .portrait.yamilka { position:relative; overflow:hidden; background:none; }
 .portrait.yamilka::before { content:""; position:absolute; inset:-28px; background:url('/Yamilka-Delgardo.jpeg') center 16%/cover no-repeat; filter:blur(24px) grayscale(1) brightness(.82); transform:scale(1.12); }
 .portrait.yamilka::after { content:""; position:absolute; inset:0; background:url('/Yamilka-Delgardo.jpeg') center 6%/70% auto no-repeat; }
@@ -211,6 +211,7 @@ footer a:hover { color:var(--green); }
 footer { padding:45px max(4.5vw,calc((100vw - var(--content-max)) / 2)); display:flex; align-items:center; justify-content:space-between; background:var(--cream); }
 footer p { font-size:12px; color:#68746f; }
 footer>div { display:flex; gap:26px; font-size:13px; font-weight:bold; }
+.footer-social a { color:var(--green); }
 
 @media(max-width:1180px) {
   .site-header { height:126px; align-items:center; padding-top:0; }
@@ -326,7 +327,7 @@ body { font-family:"Avenir Next","Trebuchet MS",Arial,sans-serif; }
 }
 
 /* Authentic SolRise photography */
-.portrait.dianne { background-image:url('/dianne-solrise-polo.jpg'); background-position:center 36%; filter:saturate(.92); }
+.portrait.dianne { background-image:url('/dianne-gonzalez-library.jpeg'); background-position:center 36%; filter:saturate(.92); }
 .portrait.yamilka::before { background-image:url('/yamilka-solrise-polo.jpg'); filter:blur(22px) saturate(.85) brightness(.9); }
 .portrait.yamilka::after { background-image:url('/yamilka-solrise-polo.jpg'); background-position:center 28%; background-size:cover; }
 @media(min-width:681px) {
@@ -337,14 +338,14 @@ body { font-family:"Avenir Next","Trebuchet MS",Arial,sans-serif; }
 .photo-story { display:grid; grid-template-columns:.65fr 1.35fr; gap:6vw; align-items:center; background:white; }
 .photo-story-copy h2 { font:500 clamp(38px,4.5vw,62px)/1.06 Georgia,serif; margin:0 0 24px; }
 .photo-story-copy>p:last-child { color:#5d6a65; font-size:17px; line-height:1.75; }
-.photo-story-grid { display:grid; grid-template-columns:1.15fr .85fr; gap:18px; height:590px; }
+.photo-story-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; height:520px; }
 .story-photo { border-radius:var(--radius); background-size:cover; background-position:center; box-shadow:0 16px 38px rgba(29,44,40,.1); }
-.story-photo.group-session { background-image:url('/dianne-group-session.jpg'); }
-.story-photo.collaboration { background-image:url('/students-collaborative-learning.jpg'); background-position:center 35%; margin-top:70px; }
+.story-photo.early-learners { background-image:url('/learning-action-early-learners.jpeg'); background-position:center 35%; }
+.story-photo.whiteboard-learning { background-image:url('/learning-action-whiteboard.jpeg'); background-position:center; }
+.story-photo.library-learning { background-image:url('/learning-action-library.jpeg'); background-position:center; }
 @media(max-width:680px) {
   .photo-story { grid-template-columns:1fr; }
   .photo-story-grid { height:520px; gap:12px; }
-  .story-photo.collaboration { margin-top:45px; }
 }
 
 /* Student moments and verified family feedback */
@@ -396,7 +397,6 @@ body { font-family:"Avenir Next","Trebuchet MS",Arial,sans-serif; }
 }
 
 /* Additional classroom photography */
-.story-photo.collaboration { background-image:url('/yamilka-guided-activity.jpg'); background-position:center 42%; }
 .review-grid { grid-template-columns:repeat(4,1fr); }
 .review-grid p { min-height:205px; font-size:20px; }
 @media(max-width:1180px) {
@@ -431,12 +431,10 @@ body { font-family:"Avenir Next","Trebuchet MS",Arial,sans-serif; }
 :root { --font-display:Handlee,cursive; --font-display-weight:400; }
 .hero h1, .mission h2, .section-heading h2, .educator-intro h2, .educator-card h3, .transitions h2, .contact h2, .learning-card h3, .page-hero h1, .content-split h2, .value-grid h3, .detail-grid h2, .format-grid h2, .tips-grid h2, .page-cta h2, .resource-group h2, .resource-links h3, .rate-grid h3, .policy-grid h2, .policy-note h2, .welcome-video h2, .photo-story-copy h2, .review-summary span { font-family:var(--font-display); font-weight:var(--font-display-weight,600); letter-spacing:-.045em; }
 .brand { font-family:Georgia,"Times New Roman",serif; }
-.portrait.dianne { background-image:url('/Dianne-Gonzalez.jpg'); background-position:center center; filter:saturate(.82); }
+.portrait.dianne { background-image:url('/dianne-gonzalez-library.jpeg'); background-position:center 36%; filter:saturate(.82); }
 @media(max-width:680px) {
   .photo-story-grid { display:grid; grid-template-columns:1fr; height:auto; }
   .story-photo { min-height:230px; aspect-ratio:16/9; }
-  .story-photo.group-session { background-position:center 38%; }
-  .story-photo.collaboration { margin-top:0; min-height:310px; aspect-ratio:4/3; }
 }
 
 
@@ -446,8 +444,10 @@ body { font-family:"Avenir Next","Trebuchet MS",Arial,sans-serif; }
 @media(max-width:680px) {
   .photo-story-copy, .photo-story-grid, .story-photo { min-width:0; width:100%; }
   .story-photo { min-height:0; aspect-ratio:16/9; }
-  .story-photo.collaboration { min-height:0; aspect-ratio:4/3; }
 }
+
+.about-team-photo { padding-top:0; background:white; }
+.about-team-photo img { display:block; width:100%; max-height:720px; object-fit:cover; object-position:center 34%; border-radius:var(--radius); box-shadow:0 18px 45px rgba(29,44,40,.12); }
 
 /* Improve mobile brand-name legibility */
 @media(max-width:680px) {
@@ -558,5 +558,5 @@ body.gallery-open { overflow:hidden; }
 
 /* Center Dianne's full portrait on the About page */
 .about-dianne-portrait { position:relative; overflow:hidden; background:none!important; filter:none!important; }
-.about-dianne-portrait::before { content:""; position:absolute; inset:-24px; background:url('/Dianne-Gonzalez.jpg') center/cover no-repeat; filter:blur(22px) saturate(.72) brightness(.88); transform:scale(1.12); }
-.about-dianne-portrait::after { content:""; position:absolute; inset:0; background:url('/Dianne-Gonzalez.jpg') center/contain no-repeat; }
+.about-dianne-portrait::before { content:""; position:absolute; inset:-24px; background:url('/dianne-gonzalez-library.jpeg') center/cover no-repeat; filter:blur(22px) saturate(.72) brightness(.88); transform:scale(1.12); }
+.about-dianne-portrait::after { content:""; position:absolute; inset:0; background:url('/dianne-gonzalez-library.jpeg') center 34%/cover no-repeat; }
