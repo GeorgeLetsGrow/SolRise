@@ -20,9 +20,9 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
   },
   icons: {
-    icon: [{ url: "/SolRise-logo-2.png", type: "image/png" }],
-    shortcut: "/SolRise-logo-2.png",
-    apple: "/SolRise-logo-2.png",
+    icon: [{ url: "/icon.png", type: "image/png", sizes: "512x512" }],
+    shortcut: "/icon.png",
+    apple: [{ url: "/apple-icon.png", type: "image/png", sizes: "180x180" }],
   },
   manifest: "/manifest.webmanifest",
   openGraph: {
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
     siteName: "SolRise Learning Academy",
     title: "SolRise Learning Academy | Where Confidence Rises",
     description: "Personalized learning that builds skills, confidence, and lifelong success for K–12 students.",
-    images: [{ url: "/SolRise-logo.png", width: 1024, height: 1024, alt: "SolRise Learning Academy" }],
+    images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "SolRise Learning Academy — Where confidence rises" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "SolRise Learning Academy | Where Confidence Rises",
     description: "Personalized K–12 tutoring, coaching, and homeschool support—in person and online.",
-    images: ["/SolRise-logo.png"],
+    images: ["/opengraph-image.png"],
   },
 };
 

@@ -11,8 +11,8 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: "#22B3AC",
     icons: [
       {
-        src: "/SolRise-logo-2.png",
-        sizes: "any",
+        src: "/icon.png",
+        sizes: "512x512",
         type: "image/png",
       },
     ],
