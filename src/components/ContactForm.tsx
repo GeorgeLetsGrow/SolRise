@@ -16,13 +16,27 @@ export default function ContactForm() {
     formData.forEach((value, key) => body.append(key, String(value)));
 
     try {
-      const response = await fetch("/", {
+      const isTranslatedPage = window.location.hostname.endsWith(".translate.goog");
+      const submissionUrl = isTranslatedPage
+        ? "https://solriselearning.netlify.app/__forms.html"
+        : "/__forms.html";
+      const response = await fetch(submissionUrl, {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: body.toString(),
+        mode: isTranslatedPage ? "no-cors" : "same-origin",
       });
 
-      if (!response.ok) throw new Error("Submission failed");
+      if (!isTranslatedPage && !response.ok) throw new Error("Submission failed");
+      if (isTranslatedPage) {
+        const thankYouUrl = new URL("/thank-you/", window.location.origin);
+        const currentParams = new URLSearchParams(window.location.search);
+        currentParams.forEach((value, key) => {
+          if (key.startsWith("_x_tr_")) thankYouUrl.searchParams.append(key, value);
+        });
+        window.location.assign(thankYouUrl.href);
+        return;
+      }
       router.push("/thank-you/");
     } catch {
       setStatus("error");
@@ -30,7 +44,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form className="contact-form" name="student-inquiry" method="POST" onSubmit={handleSubmit} data-netlify="true" netlify-honeypot="bot-field">
+    <form className="contact-form" name="student-inquiry" method="POST" action="https://solriselearning.netlify.app/__forms.html" onSubmit={handleSubmit} data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="student-inquiry" />
       <p className="hidden-field"><label>Do not fill this out: <input name="bot-field" /></label></p>
 
