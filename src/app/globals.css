@@ -85,7 +85,7 @@ footer a:hover { color:var(--green); }
 .hero-media { position:absolute; inset:154px max(6vw,calc((100vw - var(--content-max)) / 2)) 45px 0; border-radius:var(--radius); overflow:hidden; background:#d7dfd8; }
 .hero-video { width:100%; height:100%; display:block; border:0; object-fit:cover; filter:saturate(.82) contrast(.96); }
 @media(min-width:1181px) {
-  .hero-media { bottom:auto; aspect-ratio:16/9; }
+  .hero-media { top:50%; bottom:auto; aspect-ratio:16/9; transform:translateY(-50%); }
 }
 .sun-shape { position:absolute; width:340px; height:340px; border-radius:50%; background:var(--sun); top:72px; right:-80px; }
 .mission { padding:130px 15vw; text-align:center; background:white; }
