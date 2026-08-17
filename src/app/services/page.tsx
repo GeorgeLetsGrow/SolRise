@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const items = [
-  { title:"Math K–12", text:"Build number sense, close skill gaps, strengthen coursework, and grow into a confident problem-solver through clear, personalized instruction.", meta:"Foundations · Algebra · Geometry · Homework support", image:"/student-whiteboard-practice.jpg" },
+  { title:"Math K–12+", text:"Build number sense, close skill gaps, strengthen coursework, and grow into a confident problem-solver through clear, personalized instruction.", meta:"Foundations · Algebra · Geometry · Homework support", image:"/student-whiteboard-practice.jpg" },
   { title:"Reading K–6", text:"Develop phonics, fluency, vocabulary, and comprehension through engaging lessons designed around each reader.", meta:"Early literacy · Comprehension · Writing connections", image:"/service-reading-online.jpeg" },
   { title:"Spanish K–12+", text:"Learn practical communication and academic Spanish in a welcoming setting for beginners through advanced learners.", meta:"Conversation · Grammar · Coursework support", image:"/yamilka-spanish-circle.jpg" },
   { title:"Test Prep", text:"Prepare with a focused plan, targeted skill review, practice questions, and test-taking strategies that build confidence.", meta:"SAT · ACT · FAST · CLT", image:"/service-test-prep.jpeg" },
