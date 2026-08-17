@@ -25,6 +25,7 @@ function useTranslatedNavigation() {
 
     const updateInternalLinks = () => {
       document.querySelectorAll<HTMLAnchorElement>("a[href]").forEach((link) => {
+        if (link.dataset.languageToggle === "true") return;
         const nextHref = translatedUrl(link.href);
         if (nextHref) link.href = nextHref;
       });
@@ -33,7 +34,7 @@ function useTranslatedNavigation() {
     const handleInternalNavigation = (event: MouseEvent) => {
       if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
       const link = (event.target as Element | null)?.closest<HTMLAnchorElement>("a[href]");
-      if (!link || link.target === "_blank" || link.hasAttribute("download")) return;
+      if (!link || link.dataset.languageToggle === "true" || link.target === "_blank" || link.hasAttribute("download")) return;
       const nextHref = translatedUrl(link.href);
       if (!nextHref) return;
       event.preventDefault();
@@ -63,8 +64,20 @@ export function SiteHeader() {
     { href: "/policies", label: "Policies" },
   ];
 
-  function openSpanishTranslation(event: React.MouseEvent<HTMLAnchorElement>) {
+  function toggleTranslation(event: React.MouseEvent<HTMLAnchorElement>) {
     event.preventDefault();
+
+    if (window.location.hostname.endsWith(".translate.goog")) {
+      const originalUrl = new URL(window.location.pathname, "https://solriselearning.netlify.app");
+      const currentParams = new URLSearchParams(window.location.search);
+      currentParams.forEach((value, key) => {
+        if (!key.startsWith("_x_tr_")) originalUrl.searchParams.append(key, value);
+      });
+      if (window.location.hash && window.location.hash !== "#translate-es") originalUrl.hash = window.location.hash;
+      window.location.assign(originalUrl.href);
+      return;
+    }
+
     const currentPage = window.location.href.split("#")[0];
     const translateUrl = `https://translate.google.com/translate?sl=en&tl=es&u=${encodeURIComponent(currentPage)}`;
     window.open(translateUrl, "_blank", "noopener,noreferrer");
@@ -87,7 +100,7 @@ export function SiteHeader() {
             {item.label}
           </Link>
         ))}
-        <a className="translate-nav" href="#translate-es" onClick={openSpanishTranslation} lang="es" aria-label="Traducir esta página al español">Español</a>
+        <a className="translate-nav" href="#translate-es" data-language-toggle="true" onClick={toggleTranslation} lang="es" aria-label="Traducir esta página al español">Español</a>
       </nav>
       <details className="mobile-menu">
         <summary className="menu-toggle" aria-label="Toggle navigation menu">
@@ -105,7 +118,7 @@ export function SiteHeader() {
             </Link>
           ))}
           <Link className={`mobile-contact${pathname === "/contact" ? " active" : ""}`} href="/contact" aria-current={pathname === "/contact" ? "page" : undefined}>Contact</Link>
-          <a className="mobile-translate" href="#translate-es" onClick={openSpanishTranslation} lang="es">ES · Español</a>
+          <a className="mobile-translate" href="#translate-es" data-language-toggle="true" onClick={toggleTranslation} lang="es">ES · Español</a>
         </nav>
       </details>
       <Link className="button button-small" href="/contact">Let&apos;s talk</Link>
