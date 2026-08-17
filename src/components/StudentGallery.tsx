@@ -55,8 +55,12 @@ export default function StudentGallery() {
             <figcaption><span>{String(index + 1).padStart(2, "0")} / {String(photos.length).padStart(2, "0")}</span><strong>{photo.caption}</strong></figcaption>
           </figure>
         ))}
-        <button className="gallery-control gallery-control-previous" type="button" onClick={previous} aria-label="Previous photo">‹</button>
-        <button className="gallery-control gallery-control-next" type="button" onClick={next} aria-label="Next photo">›</button>
+        <button className="gallery-control gallery-control-previous" type="button" onClick={previous} aria-label="Previous photo">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg>
+        </button>
+        <button className="gallery-control gallery-control-next" type="button" onClick={next} aria-label="Next photo">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+        </button>
       </div>
       <div className="gallery-dots" aria-label="Choose a photo">
         {photos.map((photo, index) => (

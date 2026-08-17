@@ -524,6 +524,7 @@ body.gallery-open { overflow:hidden; }
 .gallery-slide figcaption span { color:var(--sol-pale-yellow); font-size:11px; font-weight:800; letter-spacing:.12em; }
 .gallery-slide figcaption strong { font-size:clamp(18px,2vw,27px); line-height:1.2; }
 .gallery-control { position:absolute; z-index:3; top:50%; display:grid; place-items:center; width:54px; height:54px; border:1px solid rgba(255,255,255,.45); border-radius:50%; color:white; background:rgba(8,30,28,.42); font-size:40px; line-height:1; cursor:pointer; transform:translateY(-50%); backdrop-filter:blur(8px); transition:.2s; }
+.gallery-control svg { width:24px; height:24px; fill:none; stroke:currentColor; stroke-width:2.25; stroke-linecap:round; stroke-linejoin:round; }
 .gallery-control:hover { color:#153d3a; background:var(--sol-pale-yellow); }
 .gallery-control:focus-visible,.gallery-dots button:focus-visible { outline:3px solid var(--sun); outline-offset:3px; }
 .gallery-control-previous { left:20px; }
