@@ -1,11 +1,26 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FocusEvent, FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
+import { parsePhoneNumberFromString } from "libphonenumber-js";
+
+const US_PHONE_MESSAGE = "Enter a valid US phone number, including the 3-digit area code.";
+
+function validateUsPhone(input: HTMLInputElement) {
+  const phoneNumber = parsePhoneNumberFromString(input.value, "US");
+  const isValidUsNumber = phoneNumber?.country === "US" && phoneNumber.isValid();
+  input.setCustomValidity(input.value && !isValidUsNumber ? US_PHONE_MESSAGE : "");
+  return isValidUsNumber ? phoneNumber : undefined;
+}
 
 export default function ContactForm() {
   const router = useRouter();
   const [status, setStatus] = useState<"idle" | "submitting" | "error">("idle");
+
+  function handlePhoneBlur(event: FocusEvent<HTMLInputElement>) {
+    const phoneNumber = validateUsPhone(event.currentTarget);
+    if (phoneNumber) event.currentTarget.value = phoneNumber.formatNational();
+  }
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -55,7 +70,7 @@ export default function ContactForm() {
           <label>Email address<input type="email" name="email" autoComplete="email" required /></label>
         </div>
         <div className="form-row">
-          <label>Phone number<input type="tel" name="phone" autoComplete="tel" required /></label>
+          <label>Phone number<input type="tel" name="phone" autoComplete="tel-national" inputMode="tel" maxLength={18} placeholder="(813) 555-0123" onInput={(event) => validateUsPhone(event.currentTarget)} onBlur={handlePhoneBlur} onInvalid={(event) => validateUsPhone(event.currentTarget)} required /></label>
           <label>Best way to reach you
             <select name="contact-preference" defaultValue="Email">
               <option>Email</option><option>Phone call</option><option>Text message</option>
