@@ -531,12 +531,12 @@ body.gallery-open { overflow:hidden; }
 .gallery-dots button.is-active { width:30px; border-radius:999px; background:var(--sol-teal-600); }
 @media(max-width:680px) {
   .gallery-slideshow { margin-top:28px; }
-  .gallery-stage { min-height:0; aspect-ratio:4/5; border-radius:16px; background:#102f2c; }
+  .gallery-stage { min-height:0; aspect-ratio:4/5; border-radius:16px; background:var(--cream); }
   .gallery-slide img { object-fit:contain; }
-  .gallery-slide figcaption { align-items:flex-start; flex-direction:column; gap:7px; padding:70px 62px 24px 20px; }
-  .gallery-control { top:auto; bottom:18px; width:42px; height:42px; font-size:32px; transform:none; }
-  .gallery-control-previous { left:auto; right:66px; }
-  .gallery-control-next { right:16px; }
+  .gallery-slide figcaption { align-items:flex-start; flex-direction:column; gap:7px; padding:70px 20px 24px; }
+  .gallery-control { top:50%; bottom:auto; width:42px; height:42px; font-size:32px; transform:translateY(-50%); }
+  .gallery-control-previous { left:12px; right:auto; }
+  .gallery-control-next { right:12px; }
   .gallery-dots { gap:6px; }
   .gallery-dots button { width:7px; height:7px; }
   .gallery-dots button.is-active { width:22px; }
