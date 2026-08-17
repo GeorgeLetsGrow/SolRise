@@ -84,6 +84,9 @@ footer a:hover { color:var(--green); }
 .hero-video-heading em { color:var(--green); }
 .hero-media { position:absolute; inset:154px max(6vw,calc((100vw - var(--content-max)) / 2)) 45px 0; border-radius:var(--radius); overflow:hidden; background:#d7dfd8; }
 .hero-video { width:100%; height:100%; display:block; border:0; object-fit:cover; filter:saturate(.82) contrast(.96); }
+@media(min-width:1181px) {
+  .hero-media { bottom:auto; aspect-ratio:16/9; }
+}
 .sun-shape { position:absolute; width:340px; height:340px; border-radius:50%; background:var(--sun); top:72px; right:-80px; }
 .mission { padding:130px 15vw; text-align:center; background:white; }
 .mission h2 { font:500 clamp(38px,4vw,64px)/1.08 Georgia,serif; letter-spacing:-2px; max-width:1040px; margin:0 auto 32px; }
