@@ -531,7 +531,8 @@ body.gallery-open { overflow:hidden; }
 .gallery-dots button.is-active { width:30px; border-radius:999px; background:var(--sol-teal-600); }
 @media(max-width:680px) {
   .gallery-slideshow { margin-top:28px; }
-  .gallery-stage { min-height:500px; border-radius:16px; }
+  .gallery-stage { min-height:0; aspect-ratio:4/5; border-radius:16px; background:#102f2c; }
+  .gallery-slide img { object-fit:contain; }
   .gallery-slide figcaption { align-items:flex-start; flex-direction:column; gap:7px; padding:70px 62px 24px 20px; }
   .gallery-control { top:auto; bottom:18px; width:42px; height:42px; font-size:32px; transform:none; }
   .gallery-control-previous { left:auto; right:66px; }
