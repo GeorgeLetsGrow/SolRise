@@ -82,7 +82,7 @@ export default function ContactForm() {
       <fieldset>
         <legend><span>2</span> Tell us about your learner</legend>
         <div className="form-row">
-          <label>Student&apos;s first name<input type="text" name="student-name" required /></label>
+          <label>Student&apos;s first name and last initial<input type="text" name="student-name" autoComplete="name" placeholder="Example: Jordan S." required /></label>
           <label>Current grade
             <select name="grade" defaultValue="" required>
               <option value="" disabled>Select grade</option>
@@ -101,7 +101,7 @@ export default function ContactForm() {
           <select name="service" defaultValue="" required>
             <option value="" disabled>Choose the closest match</option>
             <option>Math K–12+</option><option>Reading K–6</option><option>Spanish K–12+</option>
-            <option>Test Prep</option>
+            <option>Math Test Prep</option>
             <option>Academic coaching &amp; transition support</option><option>Homeschool portfolio evaluation</option>
             <option>I&apos;m not sure yet</option>
           </select>
@@ -114,6 +114,15 @@ export default function ContactForm() {
           <textarea name="goals" rows={5} placeholder="Share any challenges, goals, or questions. A few sentences is perfect." required />
         </label>
       </fieldset>
+      <div className="choice-group">
+        <span>Privacy and authorization</span>
+        <div>
+          <label>
+            <input type="checkbox" name="privacy-authorization" value="Confirmed" required /> I confirm that I am the student&apos;s parent or legal guardian, or that I am an adult student, and I authorize SolRise Learning Academy to use this information to respond to my inquiry.
+          </label>
+        </div>
+      </div>
+      <p className="form-note">This form is intended for a parent, legal guardian, or adult student. Information submitted will be used only to respond to your inquiry and evaluate appropriate learning support. Please do not include Social Security numbers, medical records, or other sensitive information.</p>
       <p className="form-note">We&apos;ll review your message and follow up with a thoughtful next step. No commitment required.</p>
       {status === "error" && <p className="form-error" role="alert">We couldn&apos;t send your inquiry. Please try again, email solriselearning@gmail.com, or call (813) 842-0668.</p>}
       <button className="button button-light" type="submit" disabled={status === "submitting"}>

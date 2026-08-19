@@ -8,10 +8,10 @@ export const metadata: Metadata = {
 };
 
 const items = [
-  { title:"Math K–12+", text:"Build number sense, close skill gaps, strengthen coursework, and grow into a confident problem-solver through clear, personalized instruction.", meta:"Foundations · Algebra · Geometry · Homework support", image:"/student-whiteboard-practice.jpg" },
+  { title:"Math K–12+", text:"Build number sense, close skill gaps, strengthen coursework, and grow into a confident problem-solver through clear, personalized instruction.", meta:"Foundations, Algebra 1, Algebra 2, Geometry, College Algebra, and More", image:"/student-whiteboard-practice.jpg" },
   { title:"Reading K–6", text:"Develop phonics, fluency, vocabulary, and comprehension through engaging lessons designed around each reader.", meta:"Early literacy · Comprehension · Writing connections", image:"/service-reading-online.jpeg" },
   { title:"Spanish K–12+", text:"Learn practical communication and academic Spanish in a welcoming setting for beginners through advanced learners.", meta:"Conversation · Grammar · Coursework support", image:"/yamilka-spanish-circle.jpg" },
-  { title:"Test Prep", text:"Prepare with a focused plan, targeted skill review, practice questions, and test-taking strategies that build confidence.", meta:"SAT · ACT · FAST · CLT", image:"/service-test-prep.jpeg" },
+  { title:"Math Test Prep", text:"Prepare with a focused plan, targeted skill review, practice questions, and test-taking strategies that build confidence.", meta:"ACT, SAT, FAST, CLT, ASVAB, GED, and more", image:"/service-test-prep.jpeg" },
   { title:"Academic Coaching & Transition Support", text:"Build reliable systems for organization, study habits, planning, and goal-setting while receiving guidance through transitions between homeschool and traditional school.", meta:"Executive skills · Accountability · Transition planning", image:"/service-academic-coaching-transitions.jpeg" },
   { title:"Homeschool Portfolio Evaluation", text:"Receive a thoughtful, comprehensive review of your learner’s academic work and documentation.", meta:"Portfolio review · Progress summary · Next steps", image:"/service-homeschool-portfolio.jpeg" },
 ];

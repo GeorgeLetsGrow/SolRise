@@ -20,11 +20,16 @@ const services = [
   },
   {
     number: "04",
+    title: "Math Test Prep",
+    text: "Focused preparation for math exams through targeted skill review, practice questions, and confidence-building test strategies.",
+  },
+  {
+    number: "05",
     title: "Academic Coaching & Transition Support",
     text: "Coaching for organization, study habits, goal-setting, and school transitions so students can move forward with clarity.",
   },
   {
-    number: "05",
+    number: "06",
     title: "Homeschool Portfolio Evaluation",
     text: "A thoughtful review of academic work and documentation, with clear feedback and practical next steps.",
   },
